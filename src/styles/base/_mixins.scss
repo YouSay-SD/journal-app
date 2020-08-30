@@ -1,0 +1,18 @@
+// Flex Center
+@mixin flex-center {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+// Flex Center Vertical
+@mixin flex-center-vertical {
+	display: flex;
+  align-items: center;
+}
+
+// Flex Center Horizontal
+@mixin flex-center-horizontal {
+	display: flex;
+  justify-items: center;
+}
