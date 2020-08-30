@@ -1,7 +1,7 @@
 // Flex Center
 @mixin flex-center {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -14,5 +14,5 @@
 // Flex Center Horizontal
 @mixin flex-center-horizontal {
 	display: flex;
-  justify-items: center;
+  justify-content: center;
 }
