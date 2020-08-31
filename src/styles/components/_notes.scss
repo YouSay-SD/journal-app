@@ -45,11 +45,14 @@
   }
 
   .notes__image {
+    @include flex-center-horizontal();
+
     img {
       object-fit: cover;
       object-position: center;
+      max-width: 900px;
       width: 100%;
-      max-height: 600px;
+      max-height: 550px;
       box-shadow: 5px 5px 15px lighten( $color: $dark-grey, $amount: 50 );
     }
   }
