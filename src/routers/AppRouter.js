@@ -49,11 +49,22 @@ export const AppRouter = () => {
 
         <Switch>
 
-          <Route path="/auth" component={ AuthRouter } />
+          {
 
-          <Route exact path="/" component={ JournalScreen } />
+            ( isLoggedIn ) 
+            // Public Route
+            ? <Route exact path="/" component={ JournalScreen } />
 
-          <Redirect to="/auth/login" />
+            // Private Route
+            : <>
+                <Route path="/auth" component={ AuthRouter } />
+
+                <Redirect to="/auth/login" />
+
+              </>            
+          }
+
+         
 
         </Switch>
 

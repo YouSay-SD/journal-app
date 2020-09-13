@@ -1,9 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { startLogout } from '../../actions/auth';
 import { JournalEntries } from './JournalEntries';
 
 export const Sidebar = () => {
+
+  const { name } = useSelector( state => state.auth );
 
   const dispatch = useDispatch();
 
@@ -20,7 +22,7 @@ export const Sidebar = () => {
 
           <i className="far fa-moon"></i>
 
-          <span>YouSay</span>
+          <span>{ name }</span>
 
         </h3>
 
