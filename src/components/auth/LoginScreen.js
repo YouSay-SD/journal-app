@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoginEmailPassword, startGoogleLogin } from '../../actions/auth';
@@ -10,7 +10,6 @@ export const LoginScreen = () => {
 
   const dispatch = useDispatch();
   const { msgError, loading } = useSelector( state => state.ui );
-  const history = useHistory();
 
   const [ formValues, handleInputChange ] = useForm({
     email: 'yousay.sd@gmail.com',
@@ -26,8 +25,6 @@ export const LoginScreen = () => {
     if ( isFormValid() ) {
       dispatch( startLoginEmailPassword( email, password ) );
     }
-
-    history.replace('/');
   }
 
   const handleGoogleLogin = () => {

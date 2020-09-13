@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import validator from 'validator';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,7 +10,6 @@ export const RegisterScreen = () => {
 
   const dispatch = useDispatch();
   const { msgError } = useSelector( state => state.ui );
-  const history = useHistory();
 
   const [ formValues, handleInputChange ] = useForm({
     name: 'YouSay',
@@ -27,8 +26,6 @@ export const RegisterScreen = () => {
     if ( isFormValid() ) {
       dispatch( startRegisterWithEmailPasswordName( email, password, name ) );
     }
-
-    history.replace('/');
   }
 
   const isFormValid = () => {

@@ -53,7 +53,12 @@ export const AppRouter = () => {
 
             ( isLoggedIn ) 
             // Public Route
-            ? <Route exact path="/" component={ JournalScreen } />
+            ? <>
+                <Route exact path="/" component={ JournalScreen } />
+
+                <Redirect to="/" />
+
+              </>
 
             // Private Route
             : <>
@@ -63,8 +68,6 @@ export const AppRouter = () => {
 
               </>            
           }
-
-         
 
         </Switch>
 
