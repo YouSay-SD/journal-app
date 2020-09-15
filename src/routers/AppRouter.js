@@ -10,6 +10,7 @@ import { AuthRouter } from './AuthRouter';
 import { JournalScreen } from '../components/journal/JournalScreen';
 import { useDispatch } from 'react-redux';
 import { login } from '../actions/auth';
+import { loadNotes } from '../helpers/loadNotes';
 
 export const AppRouter = () => {
 
@@ -25,6 +26,8 @@ export const AppRouter = () => {
       if ( user?.uid ) {
         dispatch( login( user.uid, user.displayName ) );
         setIsLoggedIn( true );
+        const notes = loadNotes( user.uid );
+
       } else {
         setIsLoggedIn( false );
       }
