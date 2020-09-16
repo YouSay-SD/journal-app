@@ -12,8 +12,6 @@ export const loadNotes = async ( uid ) => {
     })
   });
 
-  
-
   return notes;
 
 }
