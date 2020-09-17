@@ -12,6 +12,10 @@ export const loadNotes = async ( uid ) => {
     })
   });
 
+  notesSnap.forEach( snapChildren => {
+    
+  })
+
   return notes;
 
 }
