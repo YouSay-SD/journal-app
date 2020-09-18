@@ -1,4 +1,4 @@
-import { db } from "../firebase/firebase-config"
+import { db } from "../firebase/firebase-config";
 
 export const loadNotes = async ( uid ) => {
 
@@ -11,10 +11,6 @@ export const loadNotes = async ( uid ) => {
       ...snapChildren.data()
     })
   });
-
-  notesSnap.forEach( snapChildren => {
-    
-  })
 
   return notes;
 

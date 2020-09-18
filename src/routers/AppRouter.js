@@ -11,6 +11,7 @@ import { JournalScreen } from '../components/journal/JournalScreen';
 import { useDispatch } from 'react-redux';
 import { login } from '../actions/auth';
 import { loadNotes } from '../helpers/loadNotes';
+import { setNotes } from '../actions/notes';
 
 export const AppRouter = () => {
 
@@ -21,12 +22,13 @@ export const AppRouter = () => {
 
   useEffect(() => {
     
-    firebase.auth().onAuthStateChanged(( user ) => {
+    firebase.auth().onAuthStateChanged( async( user ) => {
       
       if ( user?.uid ) {
         dispatch( login( user.uid, user.displayName ) );
         setIsLoggedIn( true );
-        const notes = loadNotes( user.uid );
+        const notes = await loadNotes( user.uid );
+        dispatch( setNotes( notes ) );
 
       } else {
         setIsLoggedIn( false );
