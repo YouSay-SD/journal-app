@@ -5,7 +5,7 @@ import picture from './placeholder.jpg';
 export const JournalEntry = ({ id, date, title, body, url }) => {
 
   const noteDate = moment( date );
-
+s
   return (
     <div className="journal__entry">
       
@@ -46,5 +46,6 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
       </div>
 
     </div> 
+
   )
 }
