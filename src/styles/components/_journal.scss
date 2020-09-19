@@ -43,6 +43,16 @@
   flex: 1 1 auto;
   margin-top: 30px;
   overflow-y: scroll; 
+  padding: 0 5px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white;
+    border-radius: 5px;
+  }
 }
 
 .journal__entry {
