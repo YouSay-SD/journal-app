@@ -19,7 +19,7 @@ export const Sidebar = () => {
   }
 
   return (
-    <aside className="journal__sidebar">
+    <aside className="journal__sidebar animate__animated animate__fadeInLeft animate__faster">
       
       <div className="journal__sidebar-navbar">
 

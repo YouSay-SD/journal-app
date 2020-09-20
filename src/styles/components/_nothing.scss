@@ -1,7 +1,6 @@
 .nothing__main-content {
   @include flex-center();
   flex-direction: column;
-  background-color: $primary;
   color: $white;
   height: 100vh;
 
