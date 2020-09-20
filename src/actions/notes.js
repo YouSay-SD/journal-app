@@ -32,6 +32,14 @@ export const activeNote = ( id, note ) => ({
   }
 });
 
+export const addNewNote = ( id, note ) => ({
+  type: types.notesAddNew,
+  payload: {
+    id,
+    ...note
+  }
+});
+
 export const startLoadingNotes = ( uid ) => {
   return async( dispatch ) => {
     const notes = await loadNotes( uid );
@@ -115,4 +123,8 @@ export const startDeleting = ( id ) => {
 export const deleteNote = ( id ) => ({
   type: types.notesDelete,
   payload: id
+});
+
+export const noteLogout = () => ({
+  type: types.notesLogoutCleaning
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { startSaveNote, startUploading } from '../../actions/notes';
+import { addNewNote, startSaveNote, startUploading } from '../../actions/notes';
 
 export const NotesAppBar = () => {
 
@@ -8,9 +8,8 @@ export const NotesAppBar = () => {
   const { active } = useSelector( state => state.notes );
 
   const handleSave = () => {
-    console.log(active);
     dispatch( startSaveNote( active ) );
-
+    dispatch( addNewNote( active.id, active ) );
   }
 
   const handlePictureUpload = () => {
