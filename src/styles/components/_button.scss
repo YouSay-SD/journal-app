@@ -30,6 +30,17 @@
     }
   }
 
+  // Danger
+  &-danger {
+    background-color: $red; 
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: darken( $color: $red, $amount: 20 );
+      color: $white;
+    }
+  }
+
   // Block
   &-block {
     width: 100%;
