@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { activeNote } from '../../actions/notes';
 import { useForm } from '../../hooks/useForm';
 import { NotesAppBar } from './NotesAppBar';
-import placeholder from './placeholder.png';
 
 export const NoteScreen = () => {
 
@@ -64,7 +63,7 @@ export const NoteScreen = () => {
             <div className="notes__image">
 
               <img 
-                src={ placeholder }
+                src={ note.url }
                 alt="Note Img"
               />
 

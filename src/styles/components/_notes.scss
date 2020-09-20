@@ -42,6 +42,16 @@
     flex: 1 1 auto;
     resize: none;
     margin-bottom: 30px;
+    padding-right: 20px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark-grey;
+      border-radius: 5px;
+    }
   }
 
   .notes__image {

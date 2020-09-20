@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import picture from './placeholder.jpg';
 import { useDispatch } from 'react-redux';
 import { activeNote } from '../../actions/notes';
 
@@ -27,13 +26,13 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
       
       {
 
-        picture &&
+        url &&
         
         <div 
           className="journal__entry-picture"
           style={{
             backgroundSize: 'cover',
-            backgroundImage: `url(${ picture })`,
+            backgroundImage: `url(${ url })`,
             backgroundPosition: 'center'
           }}
         >
