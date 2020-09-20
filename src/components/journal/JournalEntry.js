@@ -45,9 +45,9 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
 
         <div className="journal__entry-body">
 
-          <h2 className="journal__entry-title">{ title }</h2>
+          <h2 className="journal__entry-title">{ ( title.length > 24 ) ? title.substr(0, 24) + '...' : title }</h2>
 
-          <p className="journal__entry-copy">{ body }</p>
+          <p className="journal__entry-copy">{ ( body.length > 110 ) ? body.substr(0, 110) + '...' : body }</p>
 
         </div>
 
